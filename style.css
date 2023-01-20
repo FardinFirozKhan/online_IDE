@@ -1,0 +1,108 @@
+.main{
+    width: 100%;
+    height: 1000px;
+}
+#btn{
+    padding: 10px 20px;
+    background-color: #1D1E22;
+    color: aliceblue;
+    float: right;
+    margin-bottom: 1%;
+    display: none;
+}
+#btn2{
+    padding: 10px 20px;
+    background-color: #1D1E22;
+    color: aliceblue;
+    margin-bottom: 1%;
+    display: none;
+}
+.coding{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+}
+.myhtml{
+    color: aqua;
+    height: 400px;
+    width: 32%;
+    float: left;
+}
+.mycss{
+    color: aqua;
+    margin-left: 1.5%;
+    height: 400px;
+    width: 32%;
+    float: left;
+}
+.myjs{
+    color: aqua;
+    height: 400px;
+    width: 32%;
+    float: right;
+    margin-right: 1%;
+}
+textarea{
+    background-color:#1D1E22;
+    color: white;
+    height: 400px;
+    width: 100%;
+    font-size: large;
+}
+.frame{
+    height: 400px;
+    width: 100%;
+}
+iframe{
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .myhtml{
+        color: aqua;
+        height: 470px;
+        width: 100%;
+        background-color: black;
+    }
+    .mycss{
+        color: aqua;
+        height: 470px;
+        width: 100%;
+        background-color: black;
+        margin-left: 0%;
+        
+    }
+    .myjs{
+        color: aqua;
+        height: 470px;
+        width: 100%;
+        background-color: black;
+        margin-right:0%;
+    }
+    h2{
+        background-color: black;
+    }
+    .main{
+        width: 100%;
+        height: 100%;
+    }
+    .coding{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    textarea{
+        background-color:#1D1E22;
+        color: white;
+        height: 400px;
+        width: 98%;
+        font-size: large;
+    }
+    .frame{
+        height: 400px;
+        width: 100%;
+        display: none;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Online IDE</h1>
+        <button id="btn2" onclick="goCode()">Go to Code</button>
+        <button id="btn" onclick="compile()">Run</button>
+       <div id="coding" class="coding">
+        <div class="myhtml">
+            <center><h2>HTML</h2></center>
+            <textarea class="html" id="html" cols="30" rows="10"></textarea>
+        </div>
+        <div class="mycss">
+            <center><h2>CSS</h2></center>
+            <textarea class="css" id="css" cols="30" rows="10"></textarea>
+        </div>
+        <div class="myjs">
+            <center><h2>JavaScript</h2></center>
+            <textarea class="js" id="js" cols="30" rows="10"></textarea>
+        </div>
+       </div>
+        <div id="frame" class="frame">
+            <iframe  class="output" id="output"></iframe>
+        </div>
+    </div>
+
+
+    <script>
+        function run(){
+            let html=document.getElementById("html").value;
+            let css="<style>"+document.getElementById("css").value+"</style>";
+            let js=document.getElementById("js").value;
+            let output=document.getElementById("output");
+            output.contentDocument.body.innerHTML=html+css;
+            output.contentWindow.eval(js);
+        }
+        document.getElementById("html").addEventListener("keyup",run);
+        document.getElementById("css").addEventListener("keyup",run);
+        document.getElementById("js").addEventListener("keyup",run);
+        function compile(){
+            let frame=document.getElementById("frame");
+            frame.style.display ='block';
+            let coding=document.getElementById("coding");
+            coding.style.display ='none';
+            run();
+            let btn = document.getElementById("btn2");
+            btn.style.display = 'block';
+            let btn1 = document.getElementById("btn");
+            btn1.style.display = 'none';
+        }
+        var wi = window.innerWidth;
+        if(wi<601){
+            let btn = document.getElementById("btn");
+            btn.style.display = 'block';
+        }
+        function goCode(){
+            let frame=document.getElementById("frame");
+            frame.style.display ='none';
+            let coding=document.getElementById("coding");
+            coding.style.display ='block';
+            let btn = document.getElementById("btn2");
+            btn.style.display = 'none';
+            let btn1 = document.getElementById("btn");
+            btn1.style.display = 'block';
+        }
+    
+    </script>
+</body>
+</html>
